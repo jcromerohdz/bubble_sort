@@ -1,3 +1,5 @@
+# bubble sort
+
 def bubble_sort(arr)
   array_length = arr.length
   return arr if array_length < 2
@@ -13,7 +15,8 @@ def bubble_sort(arr)
       next_element = arr[i + 1]
 
       if element > next_element
-        arr[i], arr[i + 1] = next_element, element
+        arr[i] = next_element
+        arr[i + 1] = element
         swapped_elements = true
       end
     end
@@ -24,7 +27,6 @@ end
 
 def bubble_sort_by(arr)
   if block_given?
-    p "we have a block"
     swap = -1
     while swap != 0
       swap = 0
