@@ -19,6 +19,7 @@ def bubble_sort(arr)
       swapped_elements = true
     end
   end
+
   arr
 end
 
