@@ -31,7 +31,7 @@ def bubble_sort_by(arr)
     while swap != 0
       swap = 0
       (0..(arr.length - 2)).each do |i|
-        if (yield(arr[i], arr[i + 1]) > 0)
+        if yield(arr[i], arr[i + 1]).positive?
           arr[i], arr[i + 1] = arr[i + 1], arr[i]
           swap += 1
         end
@@ -40,11 +40,11 @@ def bubble_sort_by(arr)
   else
     arr.sort
   end
-  puts "--------------"
-  output = arr.join(", ")
+  puts '--------------'
+  output = arr.join(', ')
   puts "[#{output}]"
 end
 
 p bubble_sort([4, 3, 78, 2, 0, 2])
 
-bubble_sort_by(["hey", "hello", "hi"]) { |left, right| left.length - right.length }
+bubble_sort_by(['hey', 'hello', 'hi']) { |left, right| left.length - right.length }
