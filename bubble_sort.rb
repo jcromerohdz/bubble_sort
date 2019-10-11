@@ -13,6 +13,7 @@ def bubble_sort(arr)
     (0..max_index).each do |i|
       element = arr[i]
       next_element = arr[i + 1]
+      
       next unless element > next_element
       arr[i] = next_element
       arr[i + 1] = element
@@ -38,6 +39,7 @@ def bubble_sort_by(arr)
   else
     arr.sort
   end
+
   puts '--------------'
   output = arr.join(', ')
   puts "[#{output}]"
