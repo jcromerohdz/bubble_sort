@@ -1,4 +1,4 @@
-# bubble sort
+# frozen_string_literal: true
 
 def bubble_sort(arr)
   array_length = arr.length
@@ -30,7 +30,7 @@ def bubble_sort_by(arr)
     swap = -1
     while swap != 0
       swap = 0
-      for i in 0..(arr.length - 2)
+      (0..(arr.length - 2)).each do |i|
         if (yield(arr[i], arr[i + 1]) > 0)
           arr[i], arr[i + 1] = arr[i + 1], arr[i]
           swap += 1
