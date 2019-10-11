@@ -14,11 +14,10 @@ def bubble_sort(arr)
       element = arr[i]
       next_element = arr[i + 1]
 
-      if element > next_element
-        arr[i] = next_element
-        arr[i + 1] = element
-        swapped_elements = true
-      end
+      next unless element > next_element
+      arr[i] = next_element
+      arr[i + 1] = element
+      swapped_elements = true
     end
   end
 
@@ -47,4 +46,4 @@ end
 
 p bubble_sort([4, 3, 78, 2, 0, 2])
 
-bubble_sort_by(['hey', 'hello', 'hi']) { |left, right| left.length - right.length }
+bubble_sort_by(%w[hey, hello, hi]) { |left, right| left.length - right.length }
