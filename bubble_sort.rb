@@ -37,7 +37,7 @@ def bubble_sort_by(arr)
       end
     end
   else
-    p "No block given"
+    p 'No block given'
     # arr.sort
   end
 
