@@ -36,13 +36,10 @@ def bubble_sort_by(arr)
       end
     end
   end
-  puts '--------------'
   output = arr.join(', ')
-  puts "[#{output}]"
   output
 end
 
 p bubble_sort([4, 3, 78, 2, 0, 2])
-
-bubble_sort_by(%w[hey hello hi]) { |left, right| left.length - right.length }
-bubble_sort_by(%w[hey hello hi])
+p bubble_sort_by(%w[hey hello hi]) { |left, right| left.length - right.length }
+p bubble_sort_by(%w[hey hello hi])
