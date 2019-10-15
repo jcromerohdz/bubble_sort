@@ -9,7 +9,6 @@ def bubble_sort(arr)
 
   while swapped_elements
     swapped_elements = false
-
     (0..max_index).each do |i|
       element = arr[i]
       next_element = arr[i + 1]
@@ -26,7 +25,7 @@ end
 
 def bubble_sort_by(arr)
   raise 'No block given' unless block_given?
-  
+
   swap = -1
   while swap != 0
     swap = 0
