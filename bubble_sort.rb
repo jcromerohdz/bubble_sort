@@ -38,14 +38,12 @@ def bubble_sort_by(arr)
     end
   else
     raise 'No block given'
-    arr.sort
   end
 
   puts '--------------'
   output = arr.join(', ')
-  puts  "[#{output}]"
-  puts '--------------'
-  return output
+  puts "[#{output}]"
+  output
 end
 
 p bubble_sort([4, 3, 78, 2, 0, 2])
