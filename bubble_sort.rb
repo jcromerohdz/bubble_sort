@@ -26,6 +26,7 @@ end
 
 def bubble_sort_by(arr)
   raise 'No block given' unless block_given?
+  
   swap = -1
   while swap != 0
     swap = 0
@@ -39,7 +40,6 @@ def bubble_sort_by(arr)
   output = arr.join(', ')
   output
 end
-
 p bubble_sort([4, 3, 78, 2, 0, 2])
-p bubble_sort_by(%w[hey hello hi]) { |left, right| left.length - right.length }
 p bubble_sort_by(%w[hey hello hi])
+p bubble_sort_by(%w[hey hello hi]) { |left, right| left.length - right.length }
